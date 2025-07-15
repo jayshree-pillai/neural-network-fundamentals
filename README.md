@@ -11,10 +11,6 @@ The model consists of:
 - Manual forward pass and backward propagation
 - Training with categorical cross-entropy loss
 
-<p align="center">
-  <img src="feedfwdNN.png" width="600" alt="Feedforward NN architecture"/>
-</p>
-
 ---
 
 ## 🧠 Architecture
