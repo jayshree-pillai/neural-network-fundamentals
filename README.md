@@ -1,36 +1,79 @@
-🧠 Neural Network from Scratch — Iris Classification
-This project implements a 2-layer neural network completely from scratch using NumPy, without relying on any deep learning libraries. The model is trained to classify Iris flower species based on their petal and sepal measurements.
+# 🧠 Neural Network from Scratch – Iris Classification
 
-🚀 What’s Inside
-Manual forward pass: ReLU + Softmax activations
+This project demonstrates a 2-layer feedforward neural network implemented entirely from scratch using **NumPy**, without using any ML libraries like TensorFlow or PyTorch. The model is trained to classify **Iris flower species** using standard backpropagation and gradient descent.
 
-Manual backward pass: Full derivation + vectorized gradients
+---
 
-Custom loss: Binary and categorical cross-entropy
+## 📌 Architecture
 
-Gradient descent updates
+The model consists of:
+- Input Layer → Hidden Layer (ReLU) → Output Layer (Softmax)
+- Manual forward pass and backward propagation
+- Training with categorical cross-entropy loss
 
-Modular class: FlexibleNN(input_dim, hidden_dim, output_dim)
+<p align="center">
+  <img src="feedfwdNN.png" width="600" alt="Feedforward NN architecture"/>
+</p>
 
-Comparison: Equivalent TensorFlow model for validation
+---
 
-🧪 Dataset
-Iris Dataset from sklearn.datasets
+## 🧠 Architecture
 
-3 output classes: Setosa, Versicolor, Virginica
+![Architecture Diagram](architecture/feedfwdNN.png)
 
-Inputs: 4 numerical features (lengths & widths)
+## 📂 Project Structure
 
-Train/test split with stratified sampling
+- `FlexibleNN`: Modular neural network class with customizable layers
+- `train_scratch.py`: End-to-end training loop using NumPy
+- `train_tensorflow.py`: Equivalent TensorFlow model for validation
+- `utils.py`: Common helper functions for loss, metrics, preprocessing
 
-Standardized using StandardScaler
+---
 
-✅ Results
-Achieved ~95%+ accuracy on test data using the scratch model
-Matched performance with TensorFlow benchmark
+## 🔬 Dataset
 
-🧩 Key Learnings
-Mechanics of forward and backward propagation
-Role of activation derivatives in gradient flow
-Impact of initialization, loss scaling, and learning rate
+- Source: `sklearn.datasets.load_iris()`
+- Inputs: 4 numerical features – sepal length/width, petal length/width
+- Outputs: 3 classes – Setosa, Versicolor, Virginica
+- Train/test split with stratified sampling
+- Features standardized using `StandardScaler`
 
+---
+
+## ✅ Results
+
+| Model           | Accuracy |
+|----------------|----------|
+| Scratch NN      | ~95%     |
+| TensorFlow (Ref)| ~96%     |
+
+The scratch model achieves comparable performance with TensorFlow’s implementation, validating the backpropagation logic.
+
+---
+
+## 🧠 Key Learnings
+
+- Building ReLU + Softmax pipelines manually
+- Deriving and vectorizing gradients for backpropagation
+- Understanding the role of activation functions in training
+- Tuning initialization, learning rate, and batch sizes
+
+---
+
+## 🚀 Future Improvements
+
+- Add batch training support
+- Integrate learning rate decay
+- Visualize loss and accuracy trends over epochs
+
+---
+
+## 📎 References
+
+- Andrew Ng’s Deep Learning Specialization
+- MIT Deep Learning Notes (6.S191)
+- CS231n: Neural Networks Module
+
+---
+
+Feel free to fork, star ⭐, or contribute! This is a foundational hands-on learning project for deep learning enthusiasts.
