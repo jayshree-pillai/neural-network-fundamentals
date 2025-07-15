@@ -11,14 +11,13 @@ The model consists of:
 - Manual forward pass and backward propagation
 - Training with categorical cross-entropy loss
 
----
-
-## 🧠 Architecture
-
 <p align="center">
   <img src="architecture/feedfwdNN.png" width="500" alt="Architecture Diagram"/>
 </p>
-## 📂 Project Structure
+
+---
+
+##  📂 Project Structure
 
 - `FlexibleNN`: Modular neural network class with customizable layers
 - `train_scratch.py`: End-to-end training loop using NumPy
