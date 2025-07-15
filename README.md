@@ -19,8 +19,9 @@ The model consists of:
 
 ## 🧠 Architecture
 
-![Architecture Diagram](architecture/feedfwdNN.png)
-
+<p align="center">
+  <img src="architecture/feedfwdNN.png" width="500" alt="Architecture Diagram"/>
+</p>
 ## 📂 Project Structure
 
 - `FlexibleNN`: Modular neural network class with customizable layers
